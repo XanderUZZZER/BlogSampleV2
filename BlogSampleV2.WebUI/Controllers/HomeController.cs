@@ -15,7 +15,7 @@ namespace BlogSampleV2.WebUI.Controllers
             this.repository = repository;
         }
 
-        // GET: Article
+        // GET: All articles
         public ViewResult Articles(int page = 1)
         {
             ArticlesViewModel model = new ArticlesViewModel
@@ -31,7 +31,15 @@ namespace BlogSampleV2.WebUI.Controllers
                     TotalItems = repository.Articles.Count()
                 }
             };
+            return View(model);
+        }
 
+        public ViewResult Article(int id)
+        {
+            ArticleViewModel model = new ArticleViewModel
+            {
+                Article = repository.Articles.Where(art => art.Id == id).FirstOrDefault()
+            };
             return View(model);
         }
     }

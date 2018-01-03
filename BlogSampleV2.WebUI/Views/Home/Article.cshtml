@@ -1,0 +1,14 @@
+﻿@using BlogSampleV2.WebUI.Models
+@model ArticleViewModel
+
+@{
+    ViewBag.Title = "Article";
+}
+
+<h2>Article</h2>
+
+<div class="post">
+    <h3>@Model.Article.Title</h3>
+    <article>@Model.Article.Text</article>
+    <p>Posted by <strong>@Model.Article.Author.Nick</strong> @Model.Article.PostedDate.ToShortDateString()</p>
+</div>    

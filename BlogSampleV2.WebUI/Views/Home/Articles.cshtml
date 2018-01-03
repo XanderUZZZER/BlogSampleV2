@@ -1,5 +1,4 @@
-﻿@using BlogSampleV2.Domain.Enteties
-@using BlogSampleV2.WebUI.Models
+﻿@using BlogSampleV2.WebUI.Models
 @model ArticlesViewModel
 
 @{
@@ -12,7 +11,17 @@
 {
     <div class="post">
         <h3>@article.Title</h3>
-        @Html.PostArticlePreview(article.Text)
+        @if (article.Text.Length > 200)
+        {
+            <article>
+                @article.Text.Substring(0, 199)...
+                @Html.ActionLink("More", "Article", "Home", new { id = article.Id }, new { @class = "more-button", @target = "_blank" })
+            </article>
+        }
+        else
+        {
+            <article>@article.Text</article>
+        }
         <p>Posted by <strong>@article.Author.Nick</strong> @article.PostedDate.ToShortDateString()</p>
     </div>    
 }

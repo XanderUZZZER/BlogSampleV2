@@ -60,6 +60,17 @@ nav ul{
     color: red;
     font-weight: bold;
 }
+.more-button{
+    border: 1px solid red;
+    background-color: yellow;
+    text-decoration: none;
+    border-radius: 2px;
+}
+.more-button:hover{
+    background-color: lightblue;
+    color: red;
+    font-weight: bold;
+}
 .main-body{
     margin: 0;
     padding: 10px 10px;

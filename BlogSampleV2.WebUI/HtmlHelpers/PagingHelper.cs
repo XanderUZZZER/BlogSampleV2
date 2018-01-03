@@ -59,7 +59,6 @@ namespace BlogSampleV2.WebUI.HtmlHelpers
             TagBuilder tag = new TagBuilder("article");
             tag.SetInnerText(article.Length < maxSymbols ? article : article.Substring(0, maxSymbols - 1) + "...");
             result.Append(tag.ToString());
-
             return MvcHtmlString.Create(result.ToString());
         }
     }
