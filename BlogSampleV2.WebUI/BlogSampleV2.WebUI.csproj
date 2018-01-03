@@ -149,6 +149,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GuestBookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuestionnaireController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -160,6 +161,7 @@
     <Compile Include="Models\FeedbacksViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\PostsViewModel.cs" />
+    <Compile Include="Models\QuestionnaireViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -174,6 +176,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\GuestBook\Feedbacks.cshtml" />
     <Content Include="Views\Home\Article.cshtml" />
+    <Content Include="Views\Questionnaire\UpdateInfo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

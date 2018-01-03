@@ -1,0 +1,33 @@
+﻿@model BlogSampleV2.WebUI.Models.QuestionnaireViewModel
+
+@{
+    ViewBag.Title = "UpdateInfo";
+}
+
+<h2>UpdateInfo</h2>
+
+@using (Html.BeginForm())
+{
+    @*@Html.Label("First Name")
+    @Html.EditorFor(model => model.User.FirstName)<br />
+    @Html.Label("Last Name")
+    @Html.EditorFor(model => model.User.LastName)<br />
+    @Html.Label("Nick")
+    @Html.EditorFor(model => model.User.Nick)<br />
+    @Html.Label("Birth date")
+    @Html.EditorFor(model => model.User.BirthDate)<br />
+    @Html.Label("Sex")
+    @Html.RadioButtonFor(model => model.User.Sex, "Male")
+    @Html.RadioButtonFor(model => model.User.Sex, "Female") <br />*@
+    <p>Name:</p>
+    <input type="text" name="name" placeholder="Name">
+
+    <p>Gender:</p>
+    <p>Female: @Html.RadioButtonFor(model => model.User.Gender, "Female", new { @checked = "checked" })</p>
+    <p>Male: @Html.RadioButtonFor(model => model.User.Gender, "Male")</p><br />
+
+    <p>Skills:</p>
+    @Html.CreateCheckedSkillList()
+
+    <p><input type="submit" value="Update info"></p>
+}

@@ -1,5 +1,7 @@
-﻿using BlogSampleV2.WebUI.Models;
+﻿using BlogSampleV2.Domain.Enteties;
+using BlogSampleV2.WebUI.Models;
 using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Web.Mvc;
 
@@ -60,6 +62,24 @@ namespace BlogSampleV2.WebUI.HtmlHelpers
             tag.SetInnerText(article.Length < maxSymbols ? article : article.Substring(0, maxSymbols - 1) + "...");
             result.Append(tag.ToString());
             return MvcHtmlString.Create(result.ToString());
+        }
+
+        public static MvcHtmlString CreateCheckedSkillList(this HtmlHelper html)
+        {
+            StringBuilder returnString = new StringBuilder();
+            Type t = typeof(Skill);
+            foreach (var s in Enum.GetNames(t))
+            {
+                TagBuilder p = new TagBuilder("p");
+                TagBuilder input = new TagBuilder("input");
+                input.MergeAttribute("name", "skill");
+                input.MergeAttribute("value", s.ToString());
+                input.MergeAttribute("type", "checkbox");
+                input.SetInnerText(s.ToString());
+                p.InnerHtml = input.ToString();
+                returnString.Append(p.ToString());
+            }
+            return new MvcHtmlString(returnString.ToString());
         }
     }
 }
