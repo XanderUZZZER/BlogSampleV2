@@ -9,6 +9,6 @@ namespace BlogSampleV2.Domain.Enteties
         public DateTime PostedDate { get; set; }
 
         public int AuthorId { get; set; }
-        public BlogUser Author { get; set; }
+        public virtual BlogUser Author { get; set; }
     }
 }

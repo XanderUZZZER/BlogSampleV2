@@ -13,7 +13,7 @@ namespace BlogSampleV2.Domain.EF
         public BlogRepository()
         {
             string dbFilePath = HttpContext.Current.Server.MapPath("~/App_Data/BlogV2.mdf");
-            blogContext = new BlogContext(string.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};Integrated Security=True;User Instance=False", dbFilePath));
+            blogContext = new BlogContext(string.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0};MultipleActiveResultSets=True;Integrated Security=True;User Instance=False", dbFilePath));
         }
 
         public IEnumerable<BlogUser> Users

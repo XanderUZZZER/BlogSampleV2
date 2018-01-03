@@ -1,0 +1,115 @@
+
+body{
+    font-family: Arial;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+    background-color: lightcyan;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header, footer{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: lightblue;
+}
+header{
+    top:0;
+}
+footer{    
+    bottom: 0;
+}
+header  h2, header .logo{
+    margin-top: 20px;
+}
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
+
+body > .content{
+    /* background-color: yellow; */
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.right-sidebar{ 
+    margin: 60px auto;
+    width: 19%;
+    /*border: 1px solid red;*/ 
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+.menu-button{  
+    display: block;
+    text-decoration: none;
+    margin: 20px auto;
+    padding-top: 15px;
+    min-width: 130px;
+    max-width: 200px;
+    height: 35px;  
+    text-align: center;
+    background-color: lightcoral;
+    font-size: 14pt;
+    border-left: 5px solid black;
+    cursor: pointer;
+}
+.menu-button:hover{
+    background-color: lightblue;
+    color: red;
+    font-weight: bold;
+}
+.main-body{
+    margin: 0;
+    padding: 10px 10px;
+    width: 77%;
+    /*border: 1px solid green;*/
+}
+.post{
+    margin: 5px auto;
+    padding: 15px 20px 1px;
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+.post > article{
+    text-align: justify;
+}
+.post > p{
+    text-align: right;
+    font-style: italic;
+}
+form{
+    margin: 40px auto 20px;
+}
+form > textarea{
+    display: block;
+    width: 100%;
+    resize: none;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 11%;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}  
+#topBtn:hover {
+    background-color: #555;
+}

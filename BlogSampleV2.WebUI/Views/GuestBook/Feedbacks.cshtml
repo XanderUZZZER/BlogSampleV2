@@ -1,0 +1,18 @@
+﻿@model BlogSampleV2.WebUI.Models.FeedbacksViewModel
+
+@{
+    ViewBag.Title = "Feedbacks";
+}
+
+<h2>Feedbacks</h2>
+
+@foreach (var feedback in @Model.Feedbacks)
+{
+    <div class="post">
+        <article>@feedback.Text</article>
+        <p>Posted by <strong>@feedback.Author.Nick</strong> @feedback.PostedDate.ToShortDateString()</p>
+    </div>
+}
+<div>
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("Feedbacks", new { page = x }))
+</div>

@@ -1,0 +1,22 @@
+﻿@using BlogSampleV2.Domain.Enteties
+@using BlogSampleV2.WebUI.Models
+@model ArticlesViewModel
+
+@{
+    ViewBag.Title = "Articles";
+}
+
+<h2>Articles</h2>
+
+@foreach (var article in @Model.Articles)
+{
+    <div class="post">
+        <h3>@article.Title</h3>
+        @Html.PostArticlePreview(article.Text)
+        <p>Posted by <strong>@article.Author.Nick</strong> @article.PostedDate.ToShortDateString()</p>
+    </div>    
+}
+
+<div>
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("Articles", new { page = x }))
+</div>
