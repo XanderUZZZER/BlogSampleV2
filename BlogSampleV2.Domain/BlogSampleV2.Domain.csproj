@@ -55,8 +55,10 @@
     <Compile Include="Enteties\Article.cs" />
     <Compile Include="Enteties\BlogUser.cs" />
     <Compile Include="Enteties\Feedback.cs" />
+    <Compile Include="Enteties\Gender.cs" />
     <Compile Include="Enteties\Person.cs" />
     <Compile Include="Enteties\Post.cs" />
+    <Compile Include="Enteties\Skill.cs" />
     <Compile Include="Enteties\Tag.cs" />
     <Compile Include="Interfaces\IBlogRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

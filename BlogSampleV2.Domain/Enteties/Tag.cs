@@ -6,6 +6,6 @@ namespace BlogSampleV2.Domain.Enteties
     {
         public int Id { get; set; }
         public string TagName { get; set; }
-        public ICollection<Article> Articles { get; set; }
+        public virtual ICollection<Article> Articles { get; set; }
     }
 }

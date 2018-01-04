@@ -39,5 +39,21 @@ namespace BlogSampleV2.Domain.EF
                 return blogContext.Feedbacks;
             }
         }
+
+        IEnumerable<Tag> IBlogRepository.Tags
+        {
+            get
+            {
+                return blogContext.Tags;
+            }
+        }
+
+        IEnumerable<Skill> IBlogRepository.Skills
+        {
+            get
+            {
+                return blogContext.Skills;
+            }
+        }
     }
 }
