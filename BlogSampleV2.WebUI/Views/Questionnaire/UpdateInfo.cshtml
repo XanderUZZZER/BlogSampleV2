@@ -1,12 +1,12 @@
 ﻿@model BlogSampleV2.WebUI.Models.QuestionnaireViewModel
 
 @{
-    ViewBag.Title = "UpdateInfo";
+    ViewBag.Title = "Update Info";
 }
 
-<h2>UpdateInfo</h2>
+<h2>Update Info</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Result", "Questionnaire"))
 {
     @*@Html.Label("First Name")
     @Html.EditorFor(model => model.User.FirstName)<br />
@@ -19,15 +19,19 @@
     @Html.Label("Sex")
     @Html.RadioButtonFor(model => model.User.Sex, "Male")
     @Html.RadioButtonFor(model => model.User.Sex, "Female") <br />*@
-    <p>Name:</p>
-    <input type="text" name="name" placeholder="Name">
-
+    <p>First name:</p>    
+    @Html.EditorFor(model => model.User.FirstName)
+    <p>Last name:</p>   
+    @Html.EditorFor(model => model.User.LastName)
+    <p>Nickname:</p>   
+    @Html.EditorFor(model => model.User.Nick)
     <p>Gender:</p>
     <p>Female: @Html.RadioButtonFor(model => model.User.Gender, "Female", new { @checked = "checked" })</p>
     <p>Male: @Html.RadioButtonFor(model => model.User.Gender, "Male")</p><br />
+    
 
     <p>Skills:</p>
-    @Html.CreateCheckedSkillList()
+    @Html.CreateCheckedSkillList(@Model.Skills)
 
     <p><input type="submit" value="Update info"></p>
 }

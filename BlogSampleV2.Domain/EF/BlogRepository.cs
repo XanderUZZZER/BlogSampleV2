@@ -24,7 +24,7 @@ namespace BlogSampleV2.Domain.EF
             }
         }
 
-        IEnumerable<Article> IBlogRepository.Articles
+        public IEnumerable<Article> Articles
         {
             get
             {
@@ -32,7 +32,7 @@ namespace BlogSampleV2.Domain.EF
             }
         }
 
-        IEnumerable<Feedback> IBlogRepository.Feedbacks
+        public IEnumerable<Feedback> Feedbacks
         {
             get
             {
@@ -40,7 +40,7 @@ namespace BlogSampleV2.Domain.EF
             }
         }
 
-        IEnumerable<Tag> IBlogRepository.Tags
+        public IEnumerable<Tag> Tags
         {
             get
             {
@@ -48,12 +48,18 @@ namespace BlogSampleV2.Domain.EF
             }
         }
 
-        IEnumerable<Skill> IBlogRepository.Skills
+        public IEnumerable<Skill> Skills
         {
             get
             {
                 return blogContext.Skills;
             }
+        }
+
+        public void AddUser(BlogUser user)
+        {
+            blogContext.Users.Add(user);
+            blogContext.SaveChanges();
         }
     }
 }

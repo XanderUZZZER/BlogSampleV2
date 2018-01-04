@@ -177,6 +177,7 @@
     <Content Include="Views\GuestBook\Feedbacks.cshtml" />
     <Content Include="Views\Home\Article.cshtml" />
     <Content Include="Views\Questionnaire\UpdateInfo.cshtml" />
+    <Content Include="Views\Questionnaire\Result.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
