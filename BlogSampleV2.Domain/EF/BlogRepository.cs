@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using BlogSampleV2.Domain.Enteties;
 using BlogSampleV2.Domain.Interfaces;
 using System.Web;
+using System.Linq;
 
 namespace BlogSampleV2.Domain.EF
 {
@@ -58,7 +59,19 @@ namespace BlogSampleV2.Domain.EF
 
         public void AddUser(BlogUser user)
         {
-            blogContext.Users.Add(user);
+            BlogUser dbEntry = blogContext.Users.Where(u => (u.FirstName == user.FirstName) && (u.LastName == user.LastName)).FirstOrDefault();
+            if (dbEntry != null)
+            {
+                dbEntry.Gender = user.Gender;
+                dbEntry.Nick = user.Nick;
+                dbEntry.Skills.Clear();
+                dbEntry.Skills = user.Skills;
+            }
+            else
+            {
+                user.RegDate = DateTime.Now;
+                blogContext.Users.Add(user);
+            }            
             blogContext.SaveChanges();
         }
     }

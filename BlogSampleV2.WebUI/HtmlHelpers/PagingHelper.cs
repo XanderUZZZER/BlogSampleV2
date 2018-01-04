@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace BlogSampleV2.WebUI.HtmlHelpers
 {
-    public static class PagingHelper
+    public static class BlogHelpers
     {
         public static MvcHtmlString PageLinks(this HtmlHelper html,
                                               PagingInfo pagingInfo,
@@ -30,7 +30,7 @@ namespace BlogSampleV2.WebUI.HtmlHelpers
                     tag.AddCssClass("btn-primary");
                 }
                 tag.AddCssClass("btn btn-default");
-                result.Append(tag.ToString());
+                result.Append(tag.ToString() + " ");
             }
             return MvcHtmlString.Create(result.ToString());
         }

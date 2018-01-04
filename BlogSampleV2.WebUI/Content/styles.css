@@ -60,6 +60,10 @@ nav ul{
     color: red;
     font-weight: bold;
 }
+.voting{
+    margin: 50px auto;
+    text-align: center;
+}
 .more-button{
     border: 1px solid red;
     background-color: yellow;

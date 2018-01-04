@@ -27,14 +27,16 @@ namespace BlogSampleV2.WebUI.Controllers
         [AcceptVerbs("POST", "GET")]
         public ViewResult Result(QuestionnaireViewModel model, List<string> skills)
         {
-            //QuestionnaireViewModel _model = model;
             model.User.Skills = new List<Skill>();
-            foreach (var s in skills)
+            if(skills != null)
             {
-                model.User.Skills.Add(repository.Skills.Where(sk => sk.Name == s).First());
-            }
+                foreach (var s in skills)
+                {
+                    model.User.Skills.Add(repository.Skills.Where(sk => sk.Name == s).First());
+                }
+            }            
             repository.AddUser(model.User);
-            return View();
+            return View(model);
         }
     }
 }

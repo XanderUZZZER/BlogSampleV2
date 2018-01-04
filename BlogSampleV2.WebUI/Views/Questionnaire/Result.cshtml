@@ -7,3 +7,20 @@
 <h2>Result</h2>
 
 
+<p>First name: <strong>@Html.DisplayFor(u => u.User.FirstName)</strong></p>
+<p>Last name: <strong>@Html.DisplayFor(u => u.User.LastName)</strong></p>
+<p>Nickname: <strong>@Html.DisplayFor(u => u.User.Nick)</strong></p>
+<p>Gender: <strong>@Html.DisplayFor(u => u.User.Gender)</strong></p>
+@if (Model.User.Skills.Count > 0)
+{
+    <p>
+        Skills: <ul>
+            @foreach (var skill in Model.User.Skills)
+            {
+                <li><strong>@(skill.Name)</strong></li>
+            }
+        </ul>
+    </p>
+}
+
+

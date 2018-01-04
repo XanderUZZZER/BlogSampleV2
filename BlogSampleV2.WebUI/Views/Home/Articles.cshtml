@@ -21,11 +21,20 @@
         else
         {
             <article>@article.Text</article>
+            @Html.ActionLink("More", "Article", "Home", new { id = article.Id }, new { @class = "more-button", @target = "_blank" })
         }
         <p>Posted by <strong>@article.Author.Nick</strong> @article.PostedDate.ToShortDateString()</p>
-    </div>    
+    </div>
 }
-
 <div>
     @Html.PageLinks(Model.PagingInfo, x => Url.Action("Articles", new { page = x }))
 </div>
+
+@section Voting
+{
+    <div class="voting">
+        <h3>Vote please</h3>
+        Yes: @Html.RadioButton("Voting", "true", true)<br>
+        No: @Html.RadioButton("Voting", "False", false)
+    </div>
+}

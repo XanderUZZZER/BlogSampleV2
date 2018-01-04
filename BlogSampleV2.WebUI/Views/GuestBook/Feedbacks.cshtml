@@ -13,6 +13,20 @@
         <p>Posted by <strong>@feedback.Author.Nick</strong> @feedback.PostedDate.ToShortDateString()</p>
     </div>
 }
+@Html.BeginForm("Feedbacks", "GuestBook", "POST")
+{
+<p>
+    First name:
+    @Html.Editor("aswertd")
+</p>
+<p>
+    Last name:
+    @Html.Editor("asewrtd")
+</p>
+<p>Nickname:</p>
+@Html.Editor("asdf")
+<input type="submit" value="Add feedback">
+}
 <div>
     @Html.PageLinks(Model.PagingInfo, x => Url.Action("Feedbacks", new { page = x }))
 </div>

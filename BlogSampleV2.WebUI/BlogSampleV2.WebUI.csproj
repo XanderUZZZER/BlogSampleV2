@@ -159,9 +159,11 @@
     <Compile Include="Models\ArticlesViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\FeedbacksViewModel.cs" />
+    <Compile Include="Models\FeedbackViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\PostsViewModel.cs" />
     <Compile Include="Models\QuestionnaireViewModel.cs" />
+    <Compile Include="Models\VoteViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

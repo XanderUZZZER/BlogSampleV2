@@ -31,8 +31,14 @@ namespace BlogSampleV2.WebUI.Controllers
                     TotalItems = repository.Feedbacks.Count()
                 }
             };
-
             return View(model);
+        }
+
+        [HttpPost]
+        public ViewResult Feedbacks()
+        {
+
+            return View();
         }
     }
 }

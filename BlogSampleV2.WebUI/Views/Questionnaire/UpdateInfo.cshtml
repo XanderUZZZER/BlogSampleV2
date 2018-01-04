@@ -8,17 +8,6 @@
 
 @using (Html.BeginForm("Result", "Questionnaire"))
 {
-    @*@Html.Label("First Name")
-    @Html.EditorFor(model => model.User.FirstName)<br />
-    @Html.Label("Last Name")
-    @Html.EditorFor(model => model.User.LastName)<br />
-    @Html.Label("Nick")
-    @Html.EditorFor(model => model.User.Nick)<br />
-    @Html.Label("Birth date")
-    @Html.EditorFor(model => model.User.BirthDate)<br />
-    @Html.Label("Sex")
-    @Html.RadioButtonFor(model => model.User.Sex, "Male")
-    @Html.RadioButtonFor(model => model.User.Sex, "Female") <br />*@
     <p>First name:</p>    
     @Html.EditorFor(model => model.User.FirstName)
     <p>Last name:</p>   
