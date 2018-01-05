@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using BlogSampleV2.Domain.Enteties;
+using BlogSampleV2.Domain.Entities;
 using BlogSampleV2.Domain.Interfaces;
 using System.Web;
 using System.Linq;

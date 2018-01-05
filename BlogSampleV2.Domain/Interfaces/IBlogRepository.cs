@@ -1,4 +1,4 @@
-﻿using BlogSampleV2.Domain.Enteties;
+﻿using BlogSampleV2.Domain.Entities;
 using System.Collections.Generic;
 
 namespace BlogSampleV2.Domain.Interfaces
