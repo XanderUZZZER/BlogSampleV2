@@ -156,7 +156,6 @@
     <Compile Include="HtmlHelpers\BlogHelpers.cs" />
     <Compile Include="Infrastructure\NinjectRegistrations.cs" />
     <Compile Include="Models\ArticlesViewModel.cs" />
-    <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\FeedbacksViewModel.cs" />
     <Compile Include="Models\FeedbackViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
@@ -176,7 +175,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\GuestBook\Feedbacks.cshtml" />
-    <Content Include="Views\Home\Article.cshtml" />
     <Content Include="Views\Questionnaire\UpdateInfo.cshtml" />
     <Content Include="Views\Questionnaire\Result.cshtml" />
     <None Include="Web.Debug.config">

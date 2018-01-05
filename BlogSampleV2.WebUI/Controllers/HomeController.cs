@@ -33,14 +33,5 @@ namespace BlogSampleV2.WebUI.Controllers
             };
             return View(model);
         }
-
-        public ViewResult Article(int id)
-        {
-            ArticleViewModel model = new ArticleViewModel
-            {
-                Article = repository.Articles.Where(art => art.Id == id).FirstOrDefault()
-            };
-            return View(model);
-        }
     }
 }

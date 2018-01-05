@@ -11,30 +11,10 @@
 {
     <div class="post">
         <h3>@article.Title</h3>
-        @if (article.Text.Length > 200)
-        {
-            <article>
-                @article.Text.Substring(0, 199)...
-                @Html.ActionLink("More", "Article", "Home", new { id = article.Id }, new { @class = "more-button", @target = "_blank" })
-            </article>
-        }
-        else
-        {
             <article>@article.Text</article>
-            @Html.ActionLink("More", "Article", "Home", new { id = article.Id }, new { @class = "more-button", @target = "_blank" })
-        }
         <p>Posted by <strong>@((article.Author.Nick) ?? (article.Author.FirstName + " " + article.Author.LastName))</strong> @article.PostedDate.ToShortDateString()</p>
     </div>
 }
 <div>
     @Html.PageLinks(Model.PagingInfo, x => Url.Action("Articles", new { page = x }))
 </div>
-
-@section Voting
-{
-    <div class="voting">
-        <h3>Vote please</h3>
-        Yes: @Html.RadioButton("Voting", "true", true)<br>
-        No: @Html.RadioButton("Voting", "False", false)
-    </div>
-}
