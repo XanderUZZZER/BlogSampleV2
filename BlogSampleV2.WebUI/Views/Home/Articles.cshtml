@@ -23,7 +23,7 @@
             <article>@article.Text</article>
             @Html.ActionLink("More", "Article", "Home", new { id = article.Id }, new { @class = "more-button", @target = "_blank" })
         }
-        <p>Posted by <strong>@article.Author.Nick</strong> @article.PostedDate.ToShortDateString()</p>
+        <p>Posted by <strong>@((article.Author.Nick) ?? (article.Author.FirstName + " " + article.Author.LastName))</strong> @article.PostedDate.ToShortDateString()</p>
     </div>
 }
 <div>

@@ -8,7 +8,7 @@ namespace BlogSampleV2.WebUI.Controllers
     public class HomeController : Controller
     {
         private IBlogRepository repository;
-        public int PageSize = 4;
+        public int PageSize = 6;
 
         public HomeController(IBlogRepository repository)
         {

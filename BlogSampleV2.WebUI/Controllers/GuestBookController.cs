@@ -8,7 +8,7 @@ namespace BlogSampleV2.WebUI.Controllers
     public class GuestBookController : Controller
     {
         private IBlogRepository repository;
-        public int PageSize = 4;
+        public int PageSize = 6;
 
         public GuestBookController(IBlogRepository repository)
         {
@@ -35,10 +35,10 @@ namespace BlogSampleV2.WebUI.Controllers
         }
 
         [HttpPost]
-        public ViewResult Feedbacks()
-        {
-
-            return View();
+        public ViewResult Feedbacks(string fName, string lName, string feedback)
+        {  
+            repository.AddFeedback(fName, lName, feedback);
+            return Feedbacks();
         }
     }
 }

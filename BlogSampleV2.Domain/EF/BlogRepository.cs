@@ -71,7 +71,30 @@ namespace BlogSampleV2.Domain.EF
             {
                 user.RegDate = DateTime.Now;
                 blogContext.Users.Add(user);
-            }            
+            }
+            blogContext.SaveChanges();
+        }
+
+        public void AddFeedback(string fName, string lName, string feedback)
+        {
+            BlogUser user = blogContext.Users.Where(u => (u.FirstName == fName) && (u.LastName == lName)).FirstOrDefault();
+            if (user == null)
+            {
+                user = new BlogUser()
+                {
+                    FirstName = fName,
+                    LastName = lName,
+                    RegDate = DateTime.Now
+                };
+                blogContext.Users.Add(user);
+            }
+            
+            blogContext.Feedbacks.Add(new Feedback()
+            {
+                Text = feedback,
+                PostedDate = DateTime.Now,
+                AuthorId = user.Id
+            });
             blogContext.SaveChanges();
         }
     }

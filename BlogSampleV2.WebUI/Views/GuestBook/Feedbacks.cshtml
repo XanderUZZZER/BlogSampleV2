@@ -10,22 +10,23 @@
 {
     <div class="post">
         <article>@feedback.Text</article>
-        <p>Posted by <strong>@feedback.Author.Nick</strong> @feedback.PostedDate.ToShortDateString()</p>
+        <p>Posted by <strong>@((feedback.Author.Nick) ?? (feedback.Author.FirstName + " " + feedback.Author.LastName))</strong> @feedback.PostedDate.ToShortDateString()</p>
     </div>
 }
-@Html.BeginForm("Feedbacks", "GuestBook", "POST")
+@using (Html.BeginForm("Feedbacks", "GuestBook", "POST"))
 {
-<p>
-    First name:
-    @Html.Editor("aswertd")
-</p>
-<p>
-    Last name:
-    @Html.Editor("asewrtd")
-</p>
-<p>Nickname:</p>
-@Html.Editor("asdf")
-<input type="submit" value="Add feedback">
+    <p>
+        First name:
+        @Html.Editor("fName", "fName")
+    </p>
+    <p>
+        Last name:
+        @Html.Editor("lName", "lName")
+    </p>
+    <p>
+        @Html.TextArea("feedback", null, new { @placeholder = "Your feedback", @rows = "3", @style = "width: 100%" })
+    </p>
+    <input type="submit" value="Add feedback">
 }
 <div>
     @Html.PageLinks(Model.PagingInfo, x => Url.Action("Feedbacks", new { page = x }))

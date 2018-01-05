@@ -1,5 +1,4 @@
 ﻿using BlogSampleV2.Domain.Enteties;
-using BlogSampleV2.Domain.Interfaces;
 using BlogSampleV2.WebUI.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +9,12 @@ namespace BlogSampleV2.WebUI.HtmlHelpers
 {
     public static class BlogHelpers
     {
+        /// <summary>
+        /// The helper calculates links to all pages for multi page view.
+        /// </summary>
+        /// <param name="pagingInfo">Class containig info about pages number and content items per page</param>
+        /// <param name="pageUrl">Func generating href's to all pages</param>
+        /// <returns>Full finished paging links</returns>
         public static MvcHtmlString PageLinks(this HtmlHelper html,
                                               PagingInfo pagingInfo,
                                               Func<int, string> pageUrl)
