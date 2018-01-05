@@ -41,14 +41,6 @@ namespace BlogSampleV2.Domain.EF
             }
         }
 
-        public IEnumerable<Tag> Tags
-        {
-            get
-            {
-                return blogContext.Tags;
-            }
-        }
-
         public IEnumerable<Skill> Skills
         {
             get

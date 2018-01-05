@@ -59,7 +59,6 @@
     <Compile Include="Enteties\Person.cs" />
     <Compile Include="Enteties\Post.cs" />
     <Compile Include="Enteties\Skill.cs" />
-    <Compile Include="Enteties\Tag.cs" />
     <Compile Include="Interfaces\IBlogRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

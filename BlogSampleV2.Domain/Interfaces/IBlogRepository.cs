@@ -8,7 +8,6 @@ namespace BlogSampleV2.Domain.Interfaces
         IEnumerable<BlogUser> Users { get; }
         IEnumerable<Article> Articles { get; }
         IEnumerable<Feedback> Feedbacks { get; }
-        IEnumerable<Tag> Tags { get; }
         IEnumerable<Skill> Skills { get; }
         void AddUser(BlogUser user);
         void AddFeedback(string fName, string lName, string feedback);
