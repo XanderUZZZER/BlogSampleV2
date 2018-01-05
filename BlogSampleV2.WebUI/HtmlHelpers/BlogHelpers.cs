@@ -1,4 +1,4 @@
-﻿using BlogSampleV2.Domain.Enteties;
+﻿using BlogSampleV2.Domain.Entities;
 using BlogSampleV2.WebUI.Models;
 using System;
 using System.Collections.Generic;

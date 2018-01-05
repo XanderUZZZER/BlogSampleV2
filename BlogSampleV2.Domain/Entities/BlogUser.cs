@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BlogSampleV2.Domain.Enteties
+namespace BlogSampleV2.Domain.Entities
 {
     public class BlogUser : Person
     {

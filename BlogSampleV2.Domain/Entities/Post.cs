@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlogSampleV2.Domain.Enteties
+namespace BlogSampleV2.Domain.Entities
 {
     public abstract class Post
     {

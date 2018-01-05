@@ -1,4 +1,4 @@
-﻿using BlogSampleV2.Domain.Enteties;
+﻿using BlogSampleV2.Domain.Entities;
 
 namespace BlogSampleV2.WebUI.Models
 {

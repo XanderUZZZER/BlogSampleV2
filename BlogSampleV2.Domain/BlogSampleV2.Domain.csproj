@@ -52,14 +52,14 @@
   <ItemGroup>
     <Compile Include="EF\BlogContext.cs" />
     <Compile Include="EF\BlogRepository.cs" />
-    <Compile Include="Enteties\Article.cs" />
-    <Compile Include="Enteties\BlogUser.cs" />
-    <Compile Include="Enteties\Feedback.cs" />
-    <Compile Include="Enteties\Gender.cs" />
-    <Compile Include="Enteties\Person.cs" />
-    <Compile Include="Enteties\Post.cs" />
-    <Compile Include="Enteties\Skill.cs" />
-    <Compile Include="Enteties\Tag.cs" />
+    <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\BlogUser.cs" />
+    <Compile Include="Entities\Feedback.cs" />
+    <Compile Include="Entities\Gender.cs" />
+    <Compile Include="Entities\Person.cs" />
+    <Compile Include="Entities\Post.cs" />
+    <Compile Include="Entities\Skill.cs" />
+    <Compile Include="Entities\Tag.cs" />
     <Compile Include="Interfaces\IBlogRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
