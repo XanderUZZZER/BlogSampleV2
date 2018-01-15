@@ -14,5 +14,11 @@ namespace BlogSampleV2.Domain.EF
         public BlogContext(string connectionString) : base (nameOrConnectionString: connectionString)
         {
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<BlogContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

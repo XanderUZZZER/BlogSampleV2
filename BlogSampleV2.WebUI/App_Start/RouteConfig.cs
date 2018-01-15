@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace BlogSampleV2.WebUI
@@ -21,6 +17,11 @@ namespace BlogSampleV2.WebUI
 
             routes.MapRoute(
                 name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Articles", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "Home",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Articles", id = UrlParameter.Optional }
             );

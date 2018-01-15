@@ -7,6 +7,7 @@ namespace BlogSampleV2.Domain.Entities
     {
         public string Nick { get; set; }
         public DateTime RegDate { get; set; }
+        public Role Role { get; set; }
         public virtual ICollection<Article> Articles { get; set; }
         public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<Skill> Skills { get; set; }
