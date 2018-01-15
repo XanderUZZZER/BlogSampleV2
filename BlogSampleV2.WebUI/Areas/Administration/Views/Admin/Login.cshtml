@@ -1,7 +1,21 @@
-﻿
+﻿@model BlogSampleV2.WebUI.Areas.Administration.Models.LoginViewModel
+
 @{
     ViewBag.Title = "Login";
 }
 
 <h2>Log in here</h2>
 
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div>
+        <label>Имя пользователя:</label>
+        @Html.TextBoxFor(m => m.UserName)
+    </div>
+    <div>
+        <label>Пароль:</label>
+        @Html.PasswordFor(m => m.Password)
+   </div>
+            <input type="submit" value="Войти" class="btn btn-primary" />
+}
