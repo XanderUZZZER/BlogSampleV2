@@ -21,7 +21,7 @@ namespace BlogSampleV2.WebUI.Controllers
             ArticlesViewModel model = new ArticlesViewModel
             {
                 Articles = repository.Articles
-                                     .OrderBy(art => art.PostedDate)
+                                     .OrderByDescending(art => art.PostedDate)
                                      .Skip((page - 1) * PageSize)
                                      .Take(PageSize),
                 PagingInfo = new PagingInfo

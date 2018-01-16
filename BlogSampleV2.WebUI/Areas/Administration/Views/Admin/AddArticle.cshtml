@@ -1,0 +1,17 @@
+﻿@model BlogSampleV2.WebUI.Areas.Administration.Models.ArticleViewModel
+@{
+    ViewBag.Title = "AddArticle";
+}
+
+<h2>Add article</h2>
+
+@using (Html.BeginForm("AddArticle", "Admin", "POST"))
+{
+    <label>Article title</label>
+    @Html.TextBoxFor(m => m.Title)
+    <p>
+        @Html.TextArea("text", null, new { @placeholder = "Your article", @rows = "3", @style = "width: 100%" })
+    </p>
+
+    <input type="submit" value="Add article">
+}

@@ -11,6 +11,7 @@ namespace BlogSampleV2.Domain.Interfaces
         IEnumerable<Tag> Tags { get; }
         IEnumerable<Skill> Skills { get; }
         void AddUser(BlogUser user);
+        void AddArticle(Article article);
         void AddFeedback(string fName, string lName, string feedback);
     }
 }

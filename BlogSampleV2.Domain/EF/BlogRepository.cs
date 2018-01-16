@@ -83,6 +83,12 @@ namespace BlogSampleV2.Domain.EF
             blogContext.SaveChanges();
         }
 
+        public void AddArticle(Article article)
+        {
+            blogContext.Articles.Add(article);
+            blogContext.SaveChanges();
+        }
+
         public void AddFeedback(string fName, string lName, string feedback)
         {
             BlogUser user = blogContext.Users.Where(u => (u.FirstName == fName) && (u.LastName == lName)).FirstOrDefault();
