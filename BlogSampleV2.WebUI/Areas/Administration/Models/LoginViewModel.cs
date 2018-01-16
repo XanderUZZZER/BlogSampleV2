@@ -5,7 +5,7 @@ namespace BlogSampleV2.WebUI.Areas.Administration.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "UserName")]
+        [Display(Name = "User name")]
         public string UserName { get; set; }
 
         [Required]

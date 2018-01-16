@@ -25,6 +25,14 @@ namespace BlogSampleV2.Domain.EF
             }
         }
 
+        public IEnumerable<Role> Roles
+        {
+            get
+            {
+                return blogContext.Roles;
+            }
+        }
+
         public IEnumerable<Article> Articles
         {
             get

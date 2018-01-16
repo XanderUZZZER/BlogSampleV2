@@ -1,8 +1,8 @@
 ﻿namespace BlogSampleV2.Domain.Entities
 {
-    public enum Role
+    public class Role
     {
-        ContentManager,
-        Guest
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

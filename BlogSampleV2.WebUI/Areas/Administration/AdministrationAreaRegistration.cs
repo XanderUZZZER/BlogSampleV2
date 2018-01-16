@@ -22,7 +22,7 @@ namespace BlogSampleV2.WebUI.Areas.Administration
             context.MapRoute(
                 "Administration_short",
                 "admin",
-                new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+                new { controller = "Admin", action = "Login", id = UrlParameter.Optional }
             );
 
             context.MapRoute(
