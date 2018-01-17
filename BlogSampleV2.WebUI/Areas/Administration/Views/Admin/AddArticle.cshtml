@@ -13,5 +13,8 @@
         @Html.TextArea("text", null, new { @placeholder = "Your article", @rows = "3", @style = "width: 100%" })
     </p>
 
+    <label>Select items </label>
+    @Html.ListBoxFor(s => s.SelectesTags, Model.AvailableTags)
+
     <input type="submit" value="Add article">
 }

@@ -23,7 +23,15 @@ namespace BlogSampleV2.WebUI.Areas.Administration.Controllers
         //[BlogAuthorize(Roles = "ContentManager")]       
         public ViewResult AddArticle()
         {
-            return View();
+            ArticleViewModel model = new ArticleViewModel();
+            foreach (var tag in repository.Tags)
+            {
+                model.AvailableTags.Add(new SelectListItem
+                {
+                    Value = tag.Id.ToString(), Text = tag.TagName
+                });
+            }
+            return View(model);
         }
 
         [HttpPost]
@@ -37,10 +45,13 @@ namespace BlogSampleV2.WebUI.Areas.Administration.Controllers
                 PostedDate = DateTime.Now
             };
             repository.AddArticle(article);
-
-            //return RedirectToRoute("Home");
-            return Redirect("~/Home");            
-            //return View("~/Views/Home/Articles.cshtml", repository.Articles);
+            List<int> Ids = new List<int>();
+            foreach (var tag in model.SelectesTags)
+            {
+                Ids.Add(Convert.ToInt32(tag));
+            }
+            repository.ArticleAddTags(article, Ids);
+            return Redirect("~/Home");
         }
 
         [AllowAnonymous]

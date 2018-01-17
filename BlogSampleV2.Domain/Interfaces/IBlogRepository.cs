@@ -13,5 +13,6 @@ namespace BlogSampleV2.Domain.Interfaces
         void AddUser(BlogUser user);
         void AddArticle(Article article);
         void AddFeedback(string fName, string lName, string feedback);
+        void ArticleAddTags(Article article, List<int> tagIds);
     }
 }

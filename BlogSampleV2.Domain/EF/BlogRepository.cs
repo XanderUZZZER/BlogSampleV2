@@ -111,5 +111,20 @@ namespace BlogSampleV2.Domain.EF
             });
             blogContext.SaveChanges();
         }
+
+        public void ArticleAddTags(Article article, List<int> tagIds)
+        {
+            Article articleItem = blogContext.Articles.Where(a => (a.AuthorId == article.AuthorId) && (a.Title == article.Title) && (a.Text == article.Text)).FirstOrDefault();
+            if (articleItem != null)
+            {
+                articleItem.Tags = new List<Tag>();
+                foreach (var id in tagIds)
+                {
+                    Tag tagItem = blogContext.Tags.Where(t => t.Id == id).First();
+                    articleItem.Tags.Add(tagItem);
+                }                
+            }
+            blogContext.SaveChanges();
+        }
     }
 }

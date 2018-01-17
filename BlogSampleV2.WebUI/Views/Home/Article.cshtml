@@ -14,7 +14,7 @@
     {
         <h5>
             Tags:<br>
-            @foreach (var tag in Model.Article.Tags)
+            @foreach (var tag in Model.Article.Tags.ToList())
             {
                 <span>#@tag.TagName </span>
             }
